@@ -1,0 +1,58 @@
+@import "imports";
+
+
+main {
+  @extend .container;
+}
+
+
+.menu {
+  @extend .col-md-2;
+  $menu-border: inset 0.0625rem #2b5a36;
+  $menu-bg-color: #49A772;
+  $menu-color: #FFFFFF;
+  color: $menu-color;
+  background-color: $menu-bg-color;
+  padding: 0;
+  border: 1px solid $menu-bg-color;
+
+  .menu__title {
+    @extend .text-xs-center;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+  }
+  .menu__items {
+    @extend .nav;
+  }
+
+
+  .menu__item__link {
+    @extend .nav-link;
+    color: $menu-color;
+    padding: 0.7rem;
+    width: 100%;
+
+    &:hover {
+      color: $menu-bg-color;
+      background-color: $menu-color;
+    }
+
+  }
+  .menu__item {
+    @extend .nav-item;
+    border-top: $menu-border;
+  }
+
+  &:after {
+    padding: 0.7rem;
+    display: block;
+    width: 100%;
+    border-top: $menu-border;
+    content: "\00a0 ";
+
+  }
+
+}
+
+
+

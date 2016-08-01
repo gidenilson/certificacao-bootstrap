@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap4",
+  "authors": [
+    "Gidenilson Alves Santiago <gidenilson@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "source",
+    "test",
+    "tests"
+  ]
+}

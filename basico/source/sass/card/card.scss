@@ -1,0 +1,36 @@
+@import "variables.scss";
+@import "mixins";
+
+.card {
+    margin: 5px;
+    width: $card-width;
+    border: $card-border;
+    background: $card-bg;
+    min-height: $card-min-height;
+    border-radius: 10px;
+    /* Declaração para aparecer no Firefox */
+    -moz-border-radius: 10px;
+    /* Para exibir nos outros navegadores como Chrome, safari, opera*/
+    -webkit-border-radius: 10px;
+    .card-header {
+        border-radius: 10px 10px 0 0;
+        /* Declaração para aparecer no Firefox */
+        -moz-border-radius: 10px 10px 0 0;
+        /* Para exibir nos outros navegadores como Chrome, safari, opera*/
+        -webkit-border-radius: 10px 10px 0 0;
+        height: $card-header-height;
+        line-height: $card-header-line-height;
+        background: $card-header-bg;
+        .card-title {
+            font-size: $card-hader-title-font-size;
+            text-align: center;
+            font-weight: bold;        
+            
+        }
+    }
+    .card-body{
+        padding: 10px;
+    }
+    @include card-custom('primary', $card-header-primary-bg);
+    @include card-custom('info', $card-header-info-bg);
+}
